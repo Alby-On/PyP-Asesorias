@@ -1,0 +1,25 @@
+/* VARIABLES DE COLOR BASADAS EN EL LOGO */
+        :root {
+            --morado: #4B2C7F;
+            --naranja: #F39221;
+            --gris-texto: #4A4A4A;
+            --blanco: #ffffff;
+            --fondo-claro: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--gris-texto);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
