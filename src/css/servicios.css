@@ -1,46 +1,86 @@
+.seccion-servicios {
+    padding: 80px 5%;
+    background-color: #f9f9f9;
+}
 
-        /* SECCIÓN SERVICIOS BREVE */
-        .servicios {
-            padding: 80px 10%;
-            text-align: center;
-            background-color: var(--fondo-claro);
-        }
+.servicios-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
-        .servicios h2 {
-            color: var(--morado);
-            margin-bottom: 40px;
-            position: relative;
-        }
+.servicios-header h2 {
+    color: #4B2C7F; /* Morado Logo */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-        .servicios h2::after {
-            content: '';
-            width: 60px;
-            height: 4px;
-            background: var(--naranja);
-            display: block;
-            margin: 10px auto;
-        }
+.servicios-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
 
-        .grid-servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .card {
-            background: var(--blanco);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-bottom: 4px solid var(--morado);
-            transition: 0.3s;
-        }
+.card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .card:hover {
-            border-bottom-color: var(--naranja);
-        }
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(75, 44, 127, 0.1);
+    border-bottom: 4px solid #F39221; /* Naranja Logo */
+}
 
-        .card h3 {
-            color: var(--morado);
-            margin-bottom: 15px;
-        }
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: rgba(75, 44, 127, 0.05);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.card:hover .card-icon {
+    background: rgba(243, 146, 33, 0.1);
+}
+
+.card h3 {
+    color: #4B2C7F; /* Morado Logo */
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    .seccion-servicios {
+        padding: 50px 20px;
+    }
+    
+    .servicios-header h2 {
+        font-size: 2rem;
+    }
+}
