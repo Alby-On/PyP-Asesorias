@@ -1,0 +1,58 @@
+<section id="contacto" class="seccion-contacto">
+    <div class="contacto-container">
+        <div class="contacto-info">
+            <h2>Hablemos de su empresa</h2>
+            <p>Déjenos sus datos y un asesor se pondrá en contacto con usted a la brevedad para agendar una reunión.</p>
+            
+            <div class="info-items">
+                <div class="item">
+                    <strong>Dirección:</strong>
+                    <span>Centro de Chillán, Ñuble, Chile</span>
+                </div>
+                <div class="item">
+                    <strong>Email:</strong>
+                    <span>contacto@ppasesorias.cl</span>
+                </div>
+                <div class="item">
+                    <strong>Horario:</strong>
+                    <span>Lunes a Viernes: 09:00 - 18:00 hrs.</span>
+                </div>
+            </div>
+
+            <div class="mapa-placeholder">
+                <p>Ubicación en Chillán</p>
+            </div>
+        </div>
+
+        <div class="contacto-form-box">
+            <form id="form-asesoria">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Servicio de Interés</label>
+                    <select id="asunto" name="asunto">
+                        <option value="contabilidad">Contabilidad General</option>
+                        <option value="tributaria">Asesoría Tributaria</option>
+                        <option value="laboral">Gestión Laboral / Remuneraciones</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntenos brevemente su necesidad..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+</section>
