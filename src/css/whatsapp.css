@@ -1,4 +1,4 @@
-/* --- BOTÓN WHATSAPP OPTIMIZADO --- */
+/* --- BOTÓN WHATSAPP 100% CENTRADO --- */
 .btn-wsp {
     position: fixed;
     bottom: 30px;
@@ -7,7 +7,8 @@
     color: #ffffff;
     border-radius: 50px;
     padding: 12px 24px;
-    display: flex;
+    /* Flexbox para centrar contenido */
+    display: flex; 
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -17,55 +18,53 @@
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     z-index: 9999;
     transition: all 0.3s ease;
-    /* Animación de pulso constante */
     animation: pulse-wsp 2s infinite;
+    /* Evita que el borde o padding afecten el tamaño calculado */
+    box-sizing: border-box; 
 }
 
 .btn-wsp:hover {
-    transform: translateY(-5px) scale(1.05); /* Sube un poco en lugar de solo crecer */
+    transform: translateY(-5px) scale(1.05);
     background-color: #128c7e;
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .whatsapp-icon {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     fill: white;
+    /* Solo aplicamos margen si hay texto al lado */
     margin-right: 10px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* --- NUEVA ANIMACIÓN DE PULSO (Menos desordenada) --- */
+/* Animación de pulso */
 @keyframes pulse-wsp {
-    0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
-/* --- AJUSTES MÓVILES --- */
+/* --- AJUSTES MÓVILES (SOLUCIÓN AL DESCENTRADO) --- */
 @media (max-width: 768px) {
     .btn-wsp {
-        padding: 0;
         width: 60px;
         height: 60px;
+        padding: 0; /* Quitamos el padding para que no empuje al icono */
         bottom: 20px;
         right: 20px;
-        border-radius: 50%; /* Se vuelve circular */
+        border-radius: 50%;
     }
 
     .wsp-text {
-        display: none; /* Oculta el texto en móviles */
+        display: none;
     }
 
     .whatsapp-icon {
-        margin-right: 0;
-        width: 30px;
-        height: 30px;
+        margin-right: 0; /* IMPORTANTE: Quitamos el margen para que quede al centro real */
+        width: 32px;
+        height: 32px;
     }
 }
