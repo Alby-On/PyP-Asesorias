@@ -1,0 +1,117 @@
+.seccion-contacto {
+    padding: 80px 5%;
+    background-color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contacto-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* Columna de Información */
+.contacto-info h2 {
+    color: #4B2C7F; /* Morado Logo */
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.contacto-info p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.info-items .item {
+    margin-bottom: 15px;
+}
+
+.info-items strong {
+    display: block;
+    color: #4B2C7F;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.mapa-placeholder {
+    margin-top: 30px;
+    height: 200px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
+}
+
+/* Columna del Formulario */
+.contacto-form-box {
+    background: #fdfdfd;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(75, 44, 127, 0.08); /* Sombra morada sutil */
+    border: 1px solid #eee;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #F39221; /* Naranja Logo al enfocar */
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: #F39221; /* Naranja Logo */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #d87d1a;
+}
+
+/* Responsivo */
+@media (max-width: 850px) {
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-info {
+        text-align: center;
+    }
+
+    .contacto-form-box {
+        padding: 25px;
+    }
+}
