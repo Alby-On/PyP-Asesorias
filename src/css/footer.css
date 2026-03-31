@@ -1,24 +1,96 @@
- /* FOOTER */
-        footer {
-            background-color: #222;
-            color: var(--blanco);
-            padding: 40px 10% 20px;
-            text-align: center;
-        }
+.footer-principal {
+    background-color: #2b1a4a; /* Un morado más oscuro para el fondo del footer */
+    color: #ffffff;
+    padding: 60px 5% 20px;
+    font-family: 'Open Sans', sans-serif;
+}
 
-        .footer-info {
-            margin-bottom: 20px;
-        }
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; /* El logo ocupa un poco más de espacio */
+    gap: 40px;
+}
 
-        .copyright {
-            font-size: 0.8rem;
-            border-top: 1px solid #444;
-            padding-top: 20px;
-            color: #888;
-        }
+.footer-col h4 {
+    color: #F39221; /* Naranja del logo para títulos */
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
 
-        /* RESPONSIVO */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero-content h1 { font-size: 2rem; }
-        }
+/* Línea decorativa bajo el título */
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #F39221;
+}
+
+/* Columna del Logo */
+.footer-logo {
+    height: 70px;
+    width: auto;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1); /* Opcional: vuelve el logo blanco si no tiene buen contraste */
+}
+
+.footer-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #d1d1d1;
+}
+
+/* Columna de Navegación y Contacto */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.footer-col ul li a {
+    color: #d1d1d1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #F39221; /* Cambio a naranja al pasar el mouse */
+    padding-left: 5px; /* Pequeño efecto de movimiento */
+}
+
+/* Footer Bottom (Copyright) */
+.footer-bottom {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-col h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-logo {
+        margin: 0 auto 20px;
+    }
+}
