@@ -17,8 +17,11 @@ function cargarComponente(id, path) {
 
 // Llamamos a la función para cada sección
 document.addEventListener("DOMContentLoaded", () => {
+    cargarComponente("topbar-placeholder", "src/components/topbar.html");
     cargarComponente("navbar-placeholder", "src/components/navbar.html");
     cargarComponente("header-placeholder", "src/components/header.html");
     cargarComponente("servicios-placeholder", "src/components/servicios.html");
     cargarComponente("footer-placeholder", "src/components/footer.html");
+    cargarComponente("wsp-placeholder", "src/components/wsp.html");
+    
 });
