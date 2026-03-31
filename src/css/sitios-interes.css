@@ -1,1 +1,62 @@
+.seccion-sitios {
+    padding: 60px 5%;
+    background-color: #ffffff;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
 
+.sitios-header h2 {
+    color: #4B2C7F; /* Morado Logo */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.sitios-header p {
+    color: #888;
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+}
+
+.sitios-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sitio-card {
+    display: block;
+    width: 150px;
+    transition: all 0.4s ease;
+    filter: grayscale(100%); /* Logos en gris por defecto */
+    opacity: 0.6;
+}
+
+.sitio-card:hover {
+    filter: grayscale(0%); /* Vuelven a su color original */
+    opacity: 1;
+    transform: scale(1.15); /* Se agrandan un poco */
+}
+
+.sitio-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Asegura que no se deformen los logos */
+    max-height: 60px;    /* Limita la altura para que se vean uniformes */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .sitios-grid {
+        gap: 25px;
+    }
+    
+    .sitio-card {
+        width: 120px;
+        filter: grayscale(0%); /* En móvil mejor dejarlos a color */
+        opacity: 1;
+    }
+}
