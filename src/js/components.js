@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cargarComponente("topbar-placeholder", "src/components/topbar.html");
     cargarComponente("navbar-placeholder", "src/components/navbar.html");
     cargarComponente("header-placeholder", "src/components/header.html");
+    cargarComponente("nosotros-placeholder", "src/components/nosotros.html");
     cargarComponente("servicios-placeholder", "src/components/servicios.html");
     cargarComponente("sitios-interes-placeholder", "src/components/sitios-interes.html");
     cargarComponente("contacto-placeholder", "src/components/contacto.html");
