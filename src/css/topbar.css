@@ -1,1 +1,33 @@
+.topbar {
+    background-color: #4B2C7F; /* Morado del logo */
+    color: #ffffff;
+    padding: 8px 5%;
+    font-size: 0.85rem;
+    font-family: 'Open Sans', sans-serif;
+}
 
+.topbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.topbar-contact span {
+    margin-right: 20px;
+}
+
+.topbar-contact span i {
+    color: #F39221; /* Naranja del logo para los iconos */
+    margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+    .topbar-location {
+        display: none; /* Escondemos la ubicación en móviles para ahorrar espacio */
+    }
+    .topbar-container {
+        justify-content: center;
+    }
+}
