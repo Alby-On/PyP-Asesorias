@@ -1,20 +1,38 @@
-/* --- HERO DINÁMICO CON IMAGEN CIRCULAR --- */
+/* --- HERO DINÁMICO CON IMAGEN CIRCULAR Y CIRCUITOS --- */
 .hero {
-    min-height: 90vh; /* Un poco más alto para lucir la imagen */
+    min-height: 90vh;
+    /* Fondo base degradado */
     background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
     display: flex;
     align-items: center;
     padding: 0 5%;
     overflow: hidden;
+    position: relative; /* Importante para los circuitos */
+}
+
+/* NUEVA CAPA DE CIRCUITOS */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Patrón de circuitos usando tus colores: Morado (%234B2C7F) y Naranja (%23F39221) */
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%234B2C7F' stroke-width='0.5' stroke-opacity='0.1'%3E%3Cpath d='M10 10h20v20h-20zM70 70h20v20h-20zM40 40h20v20h-20z'/%3E%3Cpath d='M20 30v10h20M60 50v10h10M30 20h40v20'/%3E%3C/g%3E%3Ccircle fill='%23F39221' fill-opacity='0.15' cx='10' cy='10' r='3'/%3E%3Ccircle fill='%23F39221' fill-opacity='0.15' cx='90' cy='90' r='3'/%3E%3Ccircle fill='%23F39221' fill-opacity='0.15' cx='40' cy='40' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    z-index: 0; /* Por detrás de todo */
+    pointer-events: none; /* No interfiere con clics */
 }
 
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Mitad y mitad para que el círculo quepa bien */
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+    position: relative; /* Asegura que el contenido esté sobre el fondo */
+    z-index: 1; 
 }
 
 /* Columna de Texto */
@@ -59,25 +77,25 @@
 .visual-wrapper {
     position: relative;
     z-index: 1;
-    width: 450px;  /* Tamaño del círculo */
-    height: 450px; /* Tamaño del círculo */
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
-    overflow: hidden; /* Esto es lo que recorta la imagen */
+    overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    border: 8px solid white; /* Marco blanco para que destaque */
+    border: 8px solid white;
 }
 
 .hero-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Hace que la imagen llene el círculo sin deformarse */
+    object-fit: cover;
     position: relative;
     z-index: 5;
     transition: transform 0.5s ease;
 }
 
 .visual-wrapper:hover .hero-img {
-    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    transform: scale(1.1);
 }
 
 /* Decoración detrás del círculo */
@@ -85,7 +103,7 @@
     position: absolute;
     width: 550px;
     height: 550px;
-    background: radial-gradient(circle, rgba(243, 146, 33, 0.15) 0%, transparent 70%); /* Naranja del logo sutil */
+    background: radial-gradient(circle, rgba(243, 146, 33, 0.15) 0%, transparent 70%);
     border-radius: 50%;
     top: 50%;
     left: 50%;
@@ -93,7 +111,7 @@
     z-index: 0;
 }
 
-/* Iconos Flotantes ajustados a la nueva escala */
+/* Iconos Flotantes */
 .floating-icon {
     position: absolute;
     background: white;
